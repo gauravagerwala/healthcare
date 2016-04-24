@@ -2,9 +2,9 @@
     include("config.php");
     session_start();
     
-    // $user_type = $_SESSION['user_type'];
+    //  $user_type = $_SESSION['user_type'];
     
-    // $user_email = $_SESSION['login_user'];
+    // $user_email = $_SESSION['user_email'];
     
     // if($user_type == "patient"){
     //     $qSes = mysqli_query($conn, "SELECT p_email from patient where p_email = '$user_email'");    

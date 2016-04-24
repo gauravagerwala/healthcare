@@ -43,26 +43,26 @@
 	          <ul class="dropdown-menu">
 	          	<li><a href="#">View Patient</a></li>
 	             <li><form method="get" action="patient_modification.html">
-                                <button type="submit">Modify Patient details</button></form</li>
+                                <button type="submit">Modify Patient details</button></form></li>
 	            <li role="separator" class="divider"></li>
 	             <li><form method="get" action="patient_reg.html">
-                                <button type="submit">Patient registration</button></form</li>
+                                <button type="submit">Patient registration</button></form></li>
 	            </ul>
                 </li>
 	      </ul>
           </div>
-          <form class="navbar-form navbar-right" role="search">
+          <!--<form class="navbar-form navbar-right" role="search">
 	        <div class="form-group">
 	          <input type="text" class="form-control" placeholder="Search">
 	        </div>
-	        	      </form>
+	        	      </form>-->
 	      <ul class="nav navbar-nav navbar-right">
 	        <li class="dropdown">
 	          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings <span class="caret"></span></a>
 	          <ul class="dropdown-menu">
 	            <li><a href="#">Log Out</a></li>
 	         <li><form method="get" action="doctor_modification.html">
-                                <button type="submit">Modify details</button></form</li>
+                                <button type="submit">Modify details</button></form></li>
 	          </ul>
 	        </li>
 	      </ul>

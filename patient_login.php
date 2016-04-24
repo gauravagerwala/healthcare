@@ -8,7 +8,7 @@
 		$email = mysqli_real_escape_string($conn,$_POST['email']);
 		$password = mysqli_real_escape_string($conn,$_POST['password']);
 		
-		$sql = "SELECT p_id from patient where p_email = '$email' and p_password_hash = '$password' ";
+		$sql = "SELECT p_id,p_name from patient where p_email = '$email' and p_password_hash = '$password' ";
 		$result = mysqli_query($conn,$sql);
 		$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 		
@@ -17,8 +17,9 @@
 		if($count == 1){
 			$_SESSION['user_type'] = "patient";
 			$_SESSION['user_email'] = $email;
-			
-			header("location: patient_index.html");
+			$_SESSION['user_name'] = $row['p_name'];
+						
+			header("location: patient_index.php");
 		}else{
 			echo "Your Login email or Password is invalid. <br> Please try again!";
 		}
