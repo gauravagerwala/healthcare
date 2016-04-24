@@ -2,7 +2,7 @@ create table patient (p_id integer UNSIGNED NOT NULL AUTO_INCREMENT,p_name varch
 
 create table prescription(pres_id integer UNSIGNED NOT NULL AUTO_INCREMENT,diagnosis varchar(50) ,symptoms varchar(50),test_needed varchar(50) ,medication varchar(50) ,p_id integer UNSIGNED NOT NULL,PRIMARY KEY(pres_id));
 
-create table doctor(d_id integer UNSIGNED NOT NULL AUTO_INCREMENT,d_name varchar(20) NOT NULL,d_password_hash varchar(20) NOT NULL,d_email varchar(50) UNIQUE,d_phone varchar(15) ,d_address varchar(50) ,d_qualification varchar(20) NOT NULL,d_dob date ,PRIMARY KEY(d_id));
+create table doctor(d_id integer UNSIGNED NOT NULL AUTO_INCREMENT,d_name varchar(20) NOT NULL,d_password_hash varchar(20) NOT NULL,d_email varchar(50) UNIQUE NOT NULL,d_phone varchar(15) ,d_address varchar(50) ,d_qualification varchar(20) NOT NULL,d_dob date ,PRIMARY KEY(d_id));
 
 create table test(test_id integer NOT NULL AUTO_INCREMENT,test_name varchar(20) NOT NULL,test_result varchar(50) ,test_report varchar(50),p_id integer UNSIGNED NOT NULL,d_id integer UNSIGNED,pres_id integer UNSIGNED ,hs_id integer UNSIGNED NOT NULL,PRIMARY KEY(test_id));
 
@@ -12,7 +12,7 @@ create table chamber(c_id integer UNSIGNED NOT NULL AUTO_INCREMENT,c_name varcha
 
 create table hospital(h_id integer UNSIGNED NOT NULL AUTO_INCREMENT,h_name varchar(20) NOT NULL,h_location varchar(50) ,PRIMARY KEY(h_id)); 
 
-create table hospital_staff(hs_id integer UNSIGNED NOT NULL AUTO_INCREMENT,hs_name varchar(20) NOT NULL,h_id integer UNSIGNED NOT NULL,PRIMARY KEY(hs_id));
+create table hospital_staff(hs_id integer UNSIGNED NOT NULL AUTO_INCREMENT,hs_name varchar(20) NOT NULL,hs_email varchar(50) UNIQUE NOT NULL,hs_password_hash varchar(20) NOT NULL, h_id integer UNSIGNED NOT NULL,PRIMARY KEY(hs_id));
 
 
 alter table patient add constraint fk1 foreign key(ec_id) references emergency_contact(ec_id);

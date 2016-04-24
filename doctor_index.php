@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<?php 
+include('session_doctor.php'); ?>
 <html>
 <head>
 	<title>Healthcare</title>
@@ -68,7 +70,9 @@
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
-	</nav><!-- 
+	</nav>
+	<p> Dr. <?php echo $_SESSION['user_name']; ?></p>
+	<!-- 
 	<a href="./doctor_reg.html">Sign up</a>
 	<a href="./doctor_login.html">Log in</a>
 

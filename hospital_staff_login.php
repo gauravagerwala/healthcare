@@ -21,7 +21,7 @@
 								<span class="input-group-addon">
 									<i class="glyphicon glyphicon-user"> </i>
 								</span>
-								<input type="email" name="name" class="form-control" required>	
+								<input type="email" name="email" class="form-control" required>	
 							</div>						
 						</div>
 
@@ -31,7 +31,7 @@
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-comment"></i>
 							</span>
-								<input type="password" name="room" class="form-control" required>	
+								<input type="password" name="password" class="form-control" required>	
 							</div>
 							
 						</div>

@@ -21,7 +21,7 @@
 						
 			header("location: patient_index.php");
 		}else{
-			echo "Your Login email or Password is invalid. <br> Please try again!";
+			echo "<b>Your Login email or Password is invalid. <br> Please try again!</b>";
 		}
 		
 	}

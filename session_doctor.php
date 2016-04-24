@@ -28,7 +28,8 @@
             
     // }  
     
-    if(!isset($_SESSION['user_type'])){
-        header("location: firstpage.html");
+    if($_SESSION['user_type'] != "doctor"){
+        header("location: doctor_login.php");
     }
+   
 ?>

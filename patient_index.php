@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php 
-include('session.php'); ?>
+include('session_patient.php'); ?>
 <html>
 <head>
 	<title>Healthcare</title>
@@ -30,13 +30,13 @@ include('session.php'); ?>
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
 	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">view details<span class="caret"></span></a>
-	          <ul class="dropdown-menu">view 
-	          	<li><a href="#"> symptoms</a></li>
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View Details<span class="caret"></span></a>
+	          <ul class="dropdown-menu"> 
+	          	<li><a href="#"> Symptoms</a></li>
 	            <li><a href="#">Test results</a></li>
 	            <li role="separator" class="divider"></li>
-	            <li><a href="#">prescriptions</a></li>
-                <li><a href="#">medication</a></li>
+	            <li><a href="#">Prescriptions</a></li>
+                <li><a href="#">Medication</a></li>
 	            </ul>
 	        </li>
 	      </ul>
