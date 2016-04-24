@@ -29,7 +29,7 @@
     // }  
     
     if($_SESSION['user_type'] != "hs_staff"){
-        header("location: doctor_login.php");
+        header("location: hospital_staff_login.php");
     }
    
 ?>

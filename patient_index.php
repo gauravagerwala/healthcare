@@ -45,7 +45,7 @@ include('session_patient.php'); ?>
 	        <li class="dropdown">
 	          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings <span class="caret"></span></a>
 	          <ul class="dropdown-menu">
-	            <li><a href="#">Log Out</a></li>
+	            <li><a href="logout.php">Log Out</a></li>
                 <li><form method="get" action="patient modification.html">
                                 <button type="submit">Modify details</button></form</li>
 	          </ul>
