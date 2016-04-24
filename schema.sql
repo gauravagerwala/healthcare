@@ -8,11 +8,11 @@ create table test(test_id integer NOT NULL AUTO_INCREMENT,test_name varchar(20) 
 
 create table emergency_contact(ec_id integer UNSIGNED NOT NULL AUTO_INCREMENT,ec_name varchar(20) NOT NULL,ec_phone varchar(15),PRIMARY KEY(ec_id));
 
-create table chamber(c_id integer UNSIGNED NOT NULL AUTO_INCREMENT,c_name varchar(20) NOT NULL,c_timing datetime ,c_address varchar(50),c_phone varchar(15) ,d_id integer UNSIGNED NOT NULL,h_id integer UNSIGNED ,PRIMARY KEY(c_id));
+create table chamber(c_id integer UNSIGNED NOT NULL AUTO_INCREMENT,c_name varchar(20) NOT NULL,c_timing datetime ,c_address varchar(50),c_phone varchar(15) ,d_id integer UNSIGNED NOT NULL,h_id varchar(20) ,PRIMARY KEY(c_id));
 
-create table hospital(h_id integer UNSIGNED NOT NULL AUTO_INCREMENT,h_name varchar(20) NOT NULL,h_location varchar(50) ,PRIMARY KEY(h_id)); 
+create table hospital(h_id varchar(20) NOT NULL PRIMARY KEY,h_name varchar(20) NOT NULL,h_location varchar(50), h_password_hash varchar(20) NOT NULL); 
 
-create table hospital_staff(hs_id integer UNSIGNED NOT NULL AUTO_INCREMENT,hs_name varchar(20) NOT NULL,hs_email varchar(50) UNIQUE NOT NULL,hs_password_hash varchar(20) NOT NULL, h_id integer UNSIGNED NOT NULL,PRIMARY KEY(hs_id));
+create table hospital_staff(hs_id integer UNSIGNED NOT NULL AUTO_INCREMENT,hs_name varchar(20) NOT NULL,hs_email varchar(50) UNIQUE NOT NULL,hs_password_hash varchar(20) NOT NULL, h_id varchar(20) NOT NULL,PRIMARY KEY(hs_id));
 
 
 alter table patient add constraint fk1 foreign key(ec_id) references emergency_contact(ec_id);

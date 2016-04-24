@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<?php 
+include('session_hs.php'); ?>
 <html>
 <head>
 	<title>Healthcare</title>
