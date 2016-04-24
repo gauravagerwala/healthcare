@@ -28,7 +28,7 @@
             
     // }  
     
-    if($_SESSION['user_type'] != "hs_staff"){
+    if($_SESSION['user_type'] != "hospital_staff"){
         header("location: hospital_staff_login.php");
     }
    

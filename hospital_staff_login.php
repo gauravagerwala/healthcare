@@ -1,4 +1,32 @@
 <!DOCTYPE html>
+
+<?php
+	include("config.php");
+	session_start();
+	
+	if($_SERVER["REQUEST_METHOD"] == "POST"){
+		$email = mysqli_real_escape_string($conn,$_POST['email']);
+		$password = mysqli_real_escape_string($conn,$_POST['password']);
+		
+		$sql = "SELECT hs_name from hospital_staff where hs_email = '$email' and hs_password_hash = '$password' ";
+		$result = mysqli_query($conn,$sql);
+		$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+		
+		$count = mysqli_num_rows($result);
+		
+		if($count == 1){
+			$_SESSION['user_type'] = "hospital_staff";
+			$_SESSION['user_email'] = $email;
+			$_SESSION['user_name'] = $row['hs_name'];
+						
+			header("location: hospital_staff_index.php");
+		}else{
+			echo "<b>Your Login email or Password is invalid. <br> Please try again!</b>";
+		}
+		
+	}
+?>
+
 <html>
 <head>
 	<meta charset="UTF-8">
