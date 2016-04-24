@@ -14,34 +14,35 @@
 					
 					<h1 class="text-center">Hospital Registration</h1>
 		
-					<form action="/chat.html">
+					<form action="hospital_reg.php" method = "POST">
 
 						<div class="form-group">
-							<label>hospital Name</label>
+							<label>Hospital Name</label>
 							<div class="input-group">
 								<span class="input-group-addon">
 									<i class="glyphicon glyphicon-user"> </i>
 								</span>
-								<input type="text" name="name" class="form-control" required>	
+								<input type="text" name="hospital_name" class="form-control" required>	
 							</div>						
 						</div>
 
-						<div class="form-group">
-							<label>hospital staff_Name</label>
+							<div class="form-group">
+							<label>Hospital ID</label>
 							<div class="input-group">
 								<span class="input-group-addon">
 									<i class="glyphicon glyphicon-user"> </i>
 								</span>
-								<input type="text" name="name" class="form-control" required>	
+								<input type="text" name="hospital_id" class="form-control" required>	
 							</div>						
 						</div>
+						
 						<div class="form-group">
 							<label>Hospital location</label>
 							<div class="input-group">
 								<span class="input-group-addon">
 									<i class="glyphicon glyphicon-home"> </i>
 								</span>
-								<input type="text" name="name" class="form-control" required>	
+								<input type="text" name="location" class="form-control" required>	
 							</div>						
 						</div>
                         <div class="form-group">
@@ -50,7 +51,17 @@
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-asterisk"></i>
 							</span>
-								<input type="password" name="room" class="form-control" required>	
+								<input type="password" name="passsword" class="form-control" required>	
+							</div>
+						</div>
+	
+	                   <div class="form-group">
+							<label>Retype Password</label>
+							<div class="input-group">
+							<span class="input-group-addon">
+								<i class="glyphicon glyphicon-asterisk"></i>
+							</span>
+								<input type="password" name="repassword" class="form-control" required>	
 							</div>
 						</div>
 						<div class="form-group">
