@@ -3,7 +3,7 @@
     
     $name = $_POST['hospital_name'];
     $location = $_POST['location'];
-    $id = $_POST['h_unique_name'];
+    $id = $_POST['hospital_id'];
         
     if($_POST["password"] == $_POST["repassword"]){
 		$pass = $_POST["password"];
@@ -12,7 +12,7 @@
 	}
     
     $qDoctor = "INSERT INTO hospital (h_name, h_location, h_password_hash, h_unique_name)
-                            VALUES('$name', '$location', '$pass', $id)";
+                            VALUES('$name', '$location', '$pass', '$id')";
     
     $a = mysqli_query($conn,$qDoctor);
     if(!$a){

@@ -19,5 +19,6 @@
          die(mysqli_error($conn));
      }
     
+    include("hospital_staff_login.php");
     mysqli_close($conn);
  ?>

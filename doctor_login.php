@@ -18,6 +18,7 @@
 			$_SESSION['user_type'] = "doctor";
 			$_SESSION['user_email'] = $email;
 			$_SESSION['user_name'] = $row['d_name'];
+			$_SESSION['d_id'] = $row['d_id'];
 						
 			header("location: doctor_index.php");
 		}else{

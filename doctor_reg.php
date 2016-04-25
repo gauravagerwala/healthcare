@@ -22,6 +22,7 @@
         die(mysqli_error($conn));
     }
     
+    include("doctor_login.php");
     mysqli_close($conn);
     
 ?>

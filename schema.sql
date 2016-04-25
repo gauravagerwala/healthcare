@@ -4,7 +4,7 @@ create table prescription(pres_id integer UNSIGNED NOT NULL AUTO_INCREMENT,diagn
 
 create table doctor(d_id integer UNSIGNED NOT NULL AUTO_INCREMENT,d_name varchar(20) NOT NULL,d_password_hash varchar(20) NOT NULL,d_email varchar(50) UNIQUE NOT NULL,d_phone varchar(15) ,d_address varchar(50) ,d_qualification varchar(20) NOT NULL,d_dob date ,PRIMARY KEY(d_id));
 
-create table test(test_id integer NOT NULL AUTO_INCREMENT,test_name varchar(20) NOT NULL,test_result varchar(50) ,test_report varchar(50),p_id integer UNSIGNED NOT NULL,d_id integer UNSIGNED,pres_id integer UNSIGNED ,hs_id integer UNSIGNED NOT NULL,PRIMARY KEY(test_id));
+create table test(test_id integer NOT NULL AUTO_INCREMENT,test_name varchar(20) NOT NULL,test_result varchar(50) ,test_report varchar(50),p_id integer UNSIGNED NOT NULL,d_id integer UNSIGNED,pres_id integer UNSIGNED ,hs_id integer UNSIGNED,PRIMARY KEY(test_id));
 
 create table emergency_contact(ec_id integer UNSIGNED NOT NULL AUTO_INCREMENT,ec_name varchar(20) NOT NULL,ec_phone varchar(15),PRIMARY KEY(ec_id));
 

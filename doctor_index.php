@@ -10,8 +10,9 @@ include('session_doctor.php'); ?>
 
 </head>
 <body>
-	<nav class="navbar navbar-default">
-	  <div class="container-fluid">
+	
+		<nav class="navbar navbar-default">
+	  <div class="container">
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -20,7 +21,7 @@ include('session_doctor.php'); ?>
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="#">Healthcare</a>
+	      <a class="navbar-brand" href="index.html">Healthcare</a>
 	    </div>
 
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -28,59 +29,46 @@ include('session_doctor.php'); ?>
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Upload <span class="caret"></span></a>
 	          <ul class="dropdown-menu">
-	            <li><a href="#">Prescription</a></li>
-	            <li><a href="#">Diagnosis</a></li>
-	            <li><a href="#">Symptoms</a></li>
+	            <li><a href="prescription.php">Prescription</a></li>
 	            <li role="separator" class="divider"></li>
-				<li><a href="#">Test Request</a></li>	
-	            <li><a href="#">Test Results</a></li>
+							<li><a href="test_upload.php">Test Request</a></li>	
+	            <li><a href="test_upload.php">Test Results</a></li>
 	            </ul>
 	        </li>
 	      </ul>
+			</div>
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Patient Info <span class="caret"></span></a>
 	          <ul class="dropdown-menu">
-	          	<li><a href="#">View Patient</a></li>
-	             <li><form method="get" action="patient_modification.html">
-                                <button type="submit">Modify Patient details</button></form></li>
-	            <li role="separator" class="divider"></li>
-	             <li><form method="get" action="patient_reg.html">
-                                <button type="submit">Patient registration</button></form></li>
+	          	<li><a href="view_patient.php">View Patient</a></li>
+	             <li><a href="patient_reg.html">Register Patient</a></li>                          
 	            </ul>
                 </li>
 	      </ul>
-          </div>
-          <!--<form class="navbar-form navbar-right" role="search">
-	        <div class="form-group">
-	          <input type="text" class="form-control" placeholder="Search">
-	        </div>
-	        	      </form>-->
+        </div>
+					
+					<p style = "text-align: center"> <b> Dr. <?php echo $_SESSION['user_name']; ?> </b></p> 
+
+       <div>
 	      <ul class="nav navbar-nav navbar-right">
 	        <li class="dropdown">
 	          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings <span class="caret"></span></a>
 	          <ul class="dropdown-menu">
 	            <li><a href="logout.php">Log Out</a></li>
-	         <li><form method="get" action="doctor_modification.html">
-                                <button type="submit">Modify details</button></form></li>
 	          </ul>
 	        </li>
 	      </ul>
-	    </div><!-- /.navbar-collapse -->
+	    <!--</div> /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
-	<p> Dr. <?php echo $_SESSION['user_name']; ?></p>
 	<!-- 
 	<a href="./doctor_reg.html">Sign up</a>
 	<a href="./doctor_login.html">Log in</a>
 
 	<a href="./patient_reg.html">Sign up</a>
 	<a href="./patient_login.html">Log in</a> -->
-	<h1 class="text-center">Prescription</h1>
-	<textarea rows="15" cols="150" style="margin-top: 25px ; margin-left:45px;">
-	</textarea><br>
-	<input type="button" value="Submit" class="btn bt-default btn-lg" style="float: right; margin-right:55px;" />
 </body>
 </html>

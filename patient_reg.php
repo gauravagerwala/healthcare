@@ -40,5 +40,6 @@
 		die(mysqli_error($conn));
 	}
 	
+	include("patient_login.php");
 	mysqli_close($conn);
 ?>

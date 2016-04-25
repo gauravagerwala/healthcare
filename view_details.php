@@ -44,8 +44,8 @@ return $filter_Result;
              <th>Phone</th>
              <th>gender</th>
 </tr>
-<php 
-while($row =mysqli_fetch_array($search_result)):?>
+<?php 
+while($row =mysqli_fetch_array($search_result)){ ?>
     <tr>
         <td><?php echo $row['p_id'];?></td>
         <td><?php echo $row['p_name'];?></td>
@@ -53,7 +53,7 @@ while($row =mysqli_fetch_array($search_result)):?>
         <td><?php echo $row['p_phone'];?></td>
         <td><?php echo $row['p_gender'];?></td>
     </tr>
-    <?php endwhile;?>
+    <?php }?>
     </table>
     </form>
     

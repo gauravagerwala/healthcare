@@ -62,37 +62,39 @@ include('session_patient.php'); ?>
             if(!$a || mysqli_num_rows($a) == 0){
                 echo "NOT FOUND";
             }else{
-                
-            $row = mysqli_fetch_array($a,MYSQLI_ASSOC);                    
-    ?>   
-    
-  <div class="container">
+   $q2 = mysqli_query($conn,"SELECT * from test where p_id = '$id'");
+  echo "<h2>TESTS</h2>";
+    while($row = mysqli_fetch_array($q2,MYSQLI_ASSOC)){
+        
+  ?>
+    <div class="container">
   <table class="table table-striped">
     <tbody>
       <tr>
         <td>ID</td>
-        <td><?php echo $row['p_id']; ?></td>
+        <td><?php echo $row['test_id']; ?></td>
       </tr>
       <tr>
-        <td>Name</td>
-        <td><?php echo $row['p_name']; ?></td>
+        <td>Test Name</td>
+        <td><?php echo $row['test_name']; ?></td>
       </tr><tr>
-        <td>Email</td>
-        <td><?php echo $row['p_email']; ?></td>
+        <td>Test Result</td>
+        <td><?php echo $row['test_result']; ?></td>
       </tr><tr>
-        <td>Phone</td>
-        <td><?php echo $row['p_phone']; ?></td>
+        <td>Test Report</td>
+        <td><?php echo $row['test_report']; ?></td>
       </tr><tr>
-        <td>Height</td>
-        <td><?php echo $row['p_height']; ?></td>
+        <td>Prescription ID</td>
+        <td><?php echo $row['pres_id']; ?></td>
+      </tr>
       </tr><tr>
-        <td>Weight</td>
-        <td><?php echo $row['p_weight']; ?></td>
+        <td>Doctor ID</td>
+        <td><?php echo $row['d_id']; ?></td>
       </tr>
     </tbody>
   </table>
   </div>
-	<?php } ?>
+	<?php }} ?>
 	
 </body>
 </html>
