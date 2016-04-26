@@ -11,7 +11,7 @@ include('session_doctor.php'); ?>
 </head>
 <body>
 	
-		<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default" style="height:15px">
 	  <div class="container">
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
@@ -36,7 +36,7 @@ include('session_doctor.php'); ?>
 	            </ul>
 	        </li>
 	      </ul>
-			</div>
+		
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
@@ -50,12 +50,12 @@ include('session_doctor.php'); ?>
 	      </ul>
         </div>
 					
-					<p style = "text-align: center"> <b> Dr. <?php echo $_SESSION['user_name']; ?> </b></p> 
+					<p style = "text-align: center;font-size:20px"> <b> Dr. <?php echo $_SESSION['user_name']; ?> </b></p> 
 
        <div>
 	      <ul class="nav navbar-nav navbar-right">
 	        <li class="dropdown">
-	          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings <span class="caret"></span></a>
+	          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="margin-top:-80px">Settings <span class="caret"></span></a>
 	          <ul class="dropdown-menu">
 	            <li><a href="logout.php">Log Out</a></li>
 	          </ul>

@@ -41,7 +41,7 @@ include('session_patient.php'); ?>
 				
 	      <ul class="nav navbar-nav navbar-right">
 	        <li class="dropdown">
-	          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings <span class="caret"></span></a>
+	          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"style="padding-left:750px">Settings<span class="caret"></span></a>
 	          <ul class="dropdown-menu">
 	            <li><a href="logout.php">Log Out</a></li>
             </ul>
