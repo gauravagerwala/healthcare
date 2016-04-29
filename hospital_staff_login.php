@@ -42,7 +42,7 @@
 					
 					<h1 class="text-center">Hospital staff Login</h1>
 		
-					<form action="/chat.html">
+					<form action="#" method = "POST">
 						<div class="form-group">
 							<label>Email</label>
 							<div class="input-group">

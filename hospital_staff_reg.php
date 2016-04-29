@@ -12,7 +12,7 @@
 	}
     
     $query = "INSERT INTO hospital_staff (hs_name, h_id, hs_email, hs_password_hash)
-                VALUES ($name, $hid, $email, $pass)";
+                VALUES ('$name', '$hid', '$email', '$pass')";
                 
      $a = mysqli_query($conn, $query);
      if(!$a){
